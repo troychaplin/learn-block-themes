@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Example",
+  "settings": {
+    "appearanceTools": false,
+    "border": {},
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "color": "#428df5",
+          "name": "Blue",
+          "slug": "blue"
+        }
+      ],
+      "link": true
+    },
+    "custom": {},
+    "dimensions": {},
+    "layout": {},
+    "position": {},
+    "shadow": {},
+    "spacing": {},
+    "typography": {},
+    "useRootPaddingAwareAlignments": false,
+    "blocks": {}
+  },
+  "styles": {
+    "color": {
+      "text": "var(--wp-preset--color--blue)"
+    }
+  },
+  "templateParts": [],
+  "customTemplates": [],
+  "patterns": []
+}

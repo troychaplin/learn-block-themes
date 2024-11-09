@@ -8,9 +8,9 @@
       "defaultPalette": false,
       "palette": [
         {
-          "color": "#003300",
-          "name": "Contrast",
-          "slug": "contrast"
+          "color": "#2ebf80",
+          "name": "Green",
+          "slug": "green"
         }
       ],
       "link": true
@@ -27,7 +27,7 @@
   },
   "styles": {
     "color": {
-      "text": "var(--wp-preset--color--contrast)"
+      "text": "var(--wp-preset--color--green)"
     }
   },
   "templateParts": [],
