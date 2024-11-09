@@ -11,10 +11,9 @@
 function learn_block_themes_styles()
 {
   $theme_version = wp_get_theme()->get('Version');
-
   wp_register_style(
     'learn-block-themes-styles',
-    get_template_directory_uri() . '/assets/styles.css',
+    get_template_directory_uri() . '/build/css/screen.css',
     array(),
     $theme_version
   );
@@ -23,21 +22,22 @@ function learn_block_themes_styles()
 }
 add_action('wp_enqueue_scripts', 'learn_block_themes_styles');
 
+
 /**
- * Enqueues theme scripts.
+ * Enqueues frtonend theme scripts.
  *
- * This function enqueues the JavaScript file for the theme.
- * It uses the theme version to ensure the browser loads the most recent version of the script.
+ * This function enqueues the JavaScript file located at '/build/js/frontend.js' 
+ * for the theme. The script is versioned using the theme's version number and 
+ * is set to load in the footer.
  *
  * @return void
  */
 function learn_block_themes_scripts()
 {
   $theme_version = wp_get_theme()->get('Version');
-
   wp_enqueue_script(
     'learn-block-themes-scripts',
-    get_template_directory_uri() . '/assets/js/scripts.js',
+    get_template_directory_uri() . '/build/js/frontend.js',
     array(),
     $theme_version,
     true
