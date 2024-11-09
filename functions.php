@@ -1,46 +1,50 @@
 <?php
 
 /**
- * Enqueues the theme's stylesheet.
+ * Adds theme support for various features.
  *
- * This function registers the theme's main stylesheet with WordPress, using the theme's version number
- * as the stylesheet version to ensure proper cache busting.
+ * This function is hooked into the 'after_setup_theme' action, which runs
+ * after the theme is initialized. It enables support for block styles,
+ * wide alignment, editor styles, and enqueues the editor stylesheet.
  *
  * @return void
  */
-function learn_block_themes_styles()
+function lbt_theme_supports()
+{
+  // add_theme_support('wp-block-styles');
+  add_theme_support('align-wide');
+  add_theme_support('editor-styles');
+  add_editor_style('build/css/editor.css');
+}
+
+add_action('after_setup_theme', 'lbt_theme_supports');
+
+/**
+ * Enqueues theme styles and scripts for the frontend.
+ *
+ * This function hooks into the 'wp_enqueue_scripts' action to load the theme's
+ * CSS and JavaScript files. It uses the theme's version number to ensure that
+ * the browser loads the most recent version of the files.
+ *
+ * @return void
+ */
+function lbt_enqueue_frontend()
 {
   $theme_version = wp_get_theme()->get('Version');
-  wp_register_style(
+
+  wp_enqueue_style(
     'learn-block-themes-styles',
-    get_template_directory_uri() . '/build/css/screen.css',
+    get_template_directory_uri() . '/build/css/styles.css',
     array(),
     $theme_version
   );
 
-  wp_enqueue_style('learn-block-themes-styles');
-}
-add_action('wp_enqueue_scripts', 'learn_block_themes_styles');
-
-
-/**
- * Enqueues frtonend theme scripts.
- *
- * This function enqueues the JavaScript file located at '/build/js/frontend.js' 
- * for the theme. The script is versioned using the theme's version number and 
- * is set to load in the footer.
- *
- * @return void
- */
-function learn_block_themes_scripts()
-{
-  $theme_version = wp_get_theme()->get('Version');
   wp_enqueue_script(
     'learn-block-themes-scripts',
-    get_template_directory_uri() . '/build/js/frontend.js',
+    get_template_directory_uri() . '/build/js/scripts.js',
     array(),
-    $theme_version,
-    true
+    $theme_version
   );
 }
-add_action('wp_enqueue_scripts', 'learn_block_themes_scripts');
+
+add_action('wp_enqueue_scripts', 'lbt_enqueue_frontend');

@@ -1,1 +1,1 @@
-console.log('frontend.js loaded');
+console.log('scripts.js loaded');
