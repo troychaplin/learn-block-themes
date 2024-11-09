@@ -4,7 +4,17 @@
   "settings": {
     "appearanceTools": false,
     "border": {},
-    "color": {},
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "color": "#003300",
+          "name": "Contrast",
+          "slug": "contrast"
+        }
+      ],
+      "link": true
+    },
     "custom": {},
     "dimensions": {},
     "layout": {},
@@ -15,7 +25,11 @@
     "useRootPaddingAwareAlignments": false,
     "blocks": {}
   },
-  "styles": {},
+  "styles": {
+    "color": {
+      "text": "var(--wp-preset--color--contrast)"
+    }
+  },
   "templateParts": [],
   "customTemplates": [],
   "patterns": []
