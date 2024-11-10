@@ -19,6 +19,8 @@ function lbt_theme_supports()
 
 add_action('after_setup_theme', 'lbt_theme_supports');
 
+get_template_part('parts/footer');
+
 /**
  * Enqueues theme styles and scripts for the frontend.
  *

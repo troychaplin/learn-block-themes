@@ -3,7 +3,6 @@
   "version": 3,
   "settings": {
     "appearanceTools": false,
-    "border": {},
     "color": {
       "defaultPalette": false,
       "palette": [
@@ -15,18 +14,10 @@
       ],
       "link": true
     },
-    "custom": {},
-    "dimensions": {},
     "layout": {
       "contentSize": "800px",
       "wideSize": "1200px"
-    },
-    "position": {},
-    "shadow": {},
-    "spacing": {},
-    "typography": {},
-    "useRootPaddingAwareAlignments": false,
-    "blocks": {}
+    }
   },
   "styles": {
     "color": {

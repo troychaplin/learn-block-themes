@@ -1,3 +1,41 @@
-<!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">Learn Block Themes</h1>
-<!-- /wp:heading -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"color":{"background":"#f3f3f3"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","orientation":"horizontal"}} -->
+<div
+  class="wp-block-group has-background"
+  style="
+    background-color: #f3f3f3;
+    padding-top: var(--wp--preset--spacing--40);
+    padding-right: var(--wp--preset--spacing--40);
+    padding-bottom: var(--wp--preset--spacing--40);
+    padding-left: var(--wp--preset--spacing--40);
+  "
+>
+  <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+  <div class="wp-block-group">
+    <!-- wp:site-title /-->
+
+    <!-- wp:navigation {"ref":4} /-->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+  <div class="wp-block-group">
+    <!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search","buttonUseIcon":true,"style":{"layout":{"selfStretch":"fit","flexSize":null}}} /-->
+
+    <!-- wp:buttons -->
+    <div class="wp-block-buttons">
+      <!-- wp:button {"className":"is-style-fill","style":{"color":{"background":"#23a56d"},"border":{"radius":"6px"}}} -->
+      <div class="wp-block-button is-style-fill">
+        <a
+          class="wp-block-button__link has-background wp-element-button"
+          href="#"
+          style="border-radius: 6px; background-color: #23a56d"
+          >Call Out</a
+        >
+      </div>
+      <!-- /wp:button -->
+    </div>
+    <!-- /wp:buttons -->
+  </div>
+  <!-- /wp:group -->
+</div>
+<!-- /wp:group -->
